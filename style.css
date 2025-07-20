@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator-container {
+  width: 450px;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "result result result result"
+    "clear clear delete calc"
+    "numbers numbers numbers calc"
+    "numbers numbers numbers calc"
+    "numbers numbers numbers calc"
+    "numbers numbers numbers equal";
+}
+
+.result {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: end;
+  padding: 25px 10px;
+  height: 100px;
+  grid-area: result;
+}
+
+.result-text {
+  font-size: 40px;
+  margin: 0;
+}
+
+.gray-button {
+  background-color: #d8d9db;
+  border: none;
+  height: 80px;
+  font-size: 40px;
+}
+
+.gray-button:hover {
+  background-color: #ebebeb;
+}
+
+.orange-button {
+  background-color: #df974b;
+  border: none;
+  color: white;
+  font-size: 40px;
+}
+
+.orange-button:hover {
+  background-color: #dfb07e;
+}
+
+.clear-button {
+  grid-area: clear;
+  margin: 0 1px 1px 0;
+}
+
+.delete-button {
+  grid-area: delete;
+  margin: 0 2px 1px 0;
+}
+
+.divide-button {
+  grid-area: divide;
+  margin: 0 0 1px 0;
+}
+
+.numbers-section {
+  grid-area: numbers;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "seven eight nine"
+    "four five six"
+    "one two three"
+    "zero zero zero";
+}
+
+.seven-button {
+  grid-area: seven;
+  margin: 0 1px 1px 0;
+}
+
+.eight-button {
+  grid-area: eight;
+  margin: 0 1px 1px 0;
+}
+
+.nine-button {
+  grid-area: nine;
+  margin: 0 2px 1px 0;
+}
+
+.four-button {
+  grid-area: four;
+  margin: 0 1px 1px 0;
+}
+
+.five-button {
+  grid-area: five;
+  margin: 0 1px 1px 0;
+}
+
+.six-button {
+  grid-area: six;
+  margin: 0 2px 1px 0;
+}
+
+.one-button {
+  grid-area: one;
+  margin: 0 1px 1px 0;
+}
+
+.two-button {
+  grid-area: two;
+  margin: 0 1px 1px 0;
+}
+
+.three-button {
+  grid-area: three;
+  margin: 0 2px 1px 0;
+}
+
+.zero-button {
+  grid-area: zero;
+  margin: 0 2px 0 0;
+}
+
+.calc-section {
+  grid-area: calc;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "divide"
+    "multiply"
+    "substract"
+    "add";
+}
+
+.divide-button {
+  grid-area: divide;
+}
+
+.multiply-button {
+  grid-area: multiply;
+  margin: 0 0 1px 0;
+}
+
+.subtract-button {
+  grid-area: substract;
+  margin: 0 0 1px 0;
+}
+
+.add-button {
+  grid-area: add;
+  margin: 0 0 1px 0;
+}
+
+.equal-button {
+  grid-area: equal;
+}
